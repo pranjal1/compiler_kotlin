@@ -2,7 +2,7 @@ plugins {
     java
     application
     antlr
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.8.0"
 }
 
 repositories {
@@ -10,15 +10,15 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.ajalt.clikt:clikt:3.4.0")
-    implementation("com.google.guava:guava:31.0.1-jre")
-    implementation("org.ow2.asm:asm:9.2")
-    implementation("org.ow2.asm:asm-commons:9.2")
-    implementation("org.ow2.asm:asm-util:9.2")
+    implementation("com.github.ajalt.clikt:clikt:3.5.0")
+    implementation("com.google.guava:guava:31.1-jre")
+    implementation("org.ow2.asm:asm:9.4")
+    implementation("org.ow2.asm:asm-commons:9.4")
+    implementation("org.ow2.asm:asm-util:9.4")
 
-    antlr("org.antlr:antlr4:4.9.3")
+    antlr("org.antlr:antlr4:4.11.1")
 
-    testImplementation("org.testng:testng:7.5")
+    testImplementation("org.testng:testng:7.7.0")
 }
 
 application {
