@@ -6,3 +6,24 @@ var p1: Point = Point(10, 10);
 print(p1);
 p1.x = 100;
 print(p1);
+
+
+
+var x: [Boolean] = [true, false];
+var y: [Boolean] = [true, false];
+
+var i:Int = 0;
+var j:Int = 0;
+
+while (i < 2){
+    j = 0;
+    while (j < 2){
+        print(x[i]);
+        print(y[j]);
+        print(x[i] || x[j]);
+        print(x[i] && x[j]);
+        print("-----");
+        j = j + 1;
+    }
+    i = i + 1;
+}
