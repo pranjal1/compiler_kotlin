@@ -1,0 +1,6 @@
+// string indexing not supported
+fun string_indexing(s:String) -> String{
+    return s[0];
+}
+
+print(string_indexing("PROJECT");

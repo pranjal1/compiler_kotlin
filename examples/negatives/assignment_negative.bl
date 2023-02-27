@@ -1,0 +1,5 @@
+// missing one parameter
+
+struct Point { x: Int, y: Int}
+var p2: Point = Point(10);
+print(p2);

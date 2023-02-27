@@ -1,0 +1,3 @@
+//array index assignment is not supported
+char_arr[0] = "A";
+print(char_arr);

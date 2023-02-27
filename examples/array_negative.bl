@@ -1,3 +1,0 @@
-//assignment is not supported in array
-char_arr[0] = "A";
-print(char_arr);

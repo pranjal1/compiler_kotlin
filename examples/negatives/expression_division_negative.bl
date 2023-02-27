@@ -1,0 +1,5 @@
+fun division(x: Int, y: Int) -> Int {
+    return x / y;
+}
+// division operation
+print(division(6, 3));

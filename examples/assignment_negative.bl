@@ -1,9 +1,0 @@
-struct Point { x: Int, y: Int}
-var p2: Point = Point(10);
-print(p2);
-
-
-
-//assignment is not supported in array
-char_arr[0] = "A";
-print(char_arr);

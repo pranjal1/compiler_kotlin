@@ -1,0 +1,6 @@
+fun wrong_return_type(x: Int, y: Int) -> Int {
+    return x > y;
+}
+
+print(wrong_return_type(2, 3));
+

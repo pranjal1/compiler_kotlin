@@ -1,8 +1,0 @@
-// string indexing not supported
-fun string_indexing(s:String) -> String{
-    return s[0];
-}
-
-// string addition not supported
-var str_added: String = "Pranjal" + "Dhakal";
-print(str_added);
