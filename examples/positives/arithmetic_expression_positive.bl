@@ -1,0 +1,22 @@
+fun add(x: Int, y: Int) -> Int {
+    return x + y;
+}
+
+fun subtract(x: Int, y: Int) -> Int {
+    return x - y;
+}
+
+fun mod(x: Int, y: Int) -> Int {
+    return x % y;
+}
+
+fun multiplication(x: Int, y: Int) -> Int {
+    return x * y;
+}
+
+// Arithmetic operations
+print("Arithmetic Expression Checking_ Expected: 8, 3, 2, 15");
+print(add(5,3));
+print(subtract(6,3));
+print(mod(5,3));
+print(multiplication(5,3));

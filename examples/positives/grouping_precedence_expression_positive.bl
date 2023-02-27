@@ -1,0 +1,13 @@
+fun grouping(x: Int, y: Int, z: Int) -> Int {
+    return (x * y) + z;
+}
+// Grouping calculation
+print("Group Calculation Checking_ Expected: 20");
+print(grouping(6,3,2));
+
+fun precedence(x: Int, y: Int, z: Int) -> Int {
+    return x + y * z;
+}
+// Precedence checking (should print 12)
+print("Precedence Checking_ Expected: 12");
+print(precedence(6,3,2));
