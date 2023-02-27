@@ -1,0 +1,8 @@
+struct Point { x: Int, y: Int }
+
+var p1: Point = Point(10, 10);
+
+//update struct member
+print(p1);
+p1.x = 100;
+print(p1);

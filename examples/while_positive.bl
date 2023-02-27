@@ -1,0 +1,29 @@
+var count:Int =0;
+
+while (count < 5){
+    print("Hello");
+    count = count + 1;
+}
+
+fun while_in_function(i:Int)->String{
+    var prod: Int = 1;
+    while (i>0){
+        prod = prod * i;
+        i = i-1;
+    }
+    print("Prod = ");
+    print(prod);
+    if (prod > 100){
+        return "Big Factorial";
+    }
+    else{
+        return "Small Factorial";
+    }
+}
+
+print(while_in_function(2));
+print(while_in_function(5));
+
+while(1 == 1){
+    print("Hello World!");
+}
