@@ -144,43 +144,161 @@ Parenthesis, `(` and `)`, can be used to group expressions and can be used to ch
 
 ## Statements
 
-Statements do not produce a value. They produce a side-effect. Example: `return` returns a value from a function.
+Statements do not produce a value. They produce a side-effect. Statements are used to control the program flow like branching (`if`) or looping (`while`). Example: `return` statement returns a value from a function.
 
 ### Assignment
 
-Assignment statements store a value in a location (variable, structure field, or array element). The type of the value must be compatible with the type of the location.
+Assignment statements store a value in a location (variable, structure field, or array element). The type of the value must be compatible with the type of the location. We use the assignment operator `=` to perform assignment.
+Mutiple assignments can be chained.
+
+```
+var x: Int = 0;
+var y: Int = 5;
+var z: Int = 10;
+
+// assigment operation
+x = y; // 5
+
+// Multiple assignment can be chained
+x = y = z;
+
+print(x); // 10
+print(y); // 10
+```
 
 ### Block
 
-A block is a sequence of statements surrounded by braces `{` and `}`
+A block is a sequence of statements surrounded by braces `{` and `}`. Block is used to define a scope of a task. Variables declared inside a scope are only accessible inside that scope.
+```
+var x:Int = 1;
+
+if (x == 1){
+    var y:Int = 5;
+    print(y); // Valid statement.
+}
+
+print(y); // Invalid as the variable y is not defined in this scope.
+```
 
 ### Expression statement
 
-An expression followed by a semi-colon `;` is am expression statement
+An expression followed by a semi-colon `;` is an expression statement.
 
 ### If
 
-An if statement executes one of two statements based on some condition value (e.g., `if (c) s1 else s2`)
+An if statement executes one of two statements based on some condition value (e.g., `if (c) s1 else s2`). If statement is used to perform the branching operation based on some test condition that evaluates to a boolean value. If the test condition evaluates to a `true` value then the block associated with the `if` branch is executed. Otherwise, the block associated with the `else` branch is executed.
+
+```
+if (x > max){ // test condition that evaluates to a boolean
+    x = max; // if block
+}
+else{
+    x = x + 1; // else block
+}
+```
 
 ### While
 
-A while loop executes the body repeatedly as long as the condition expression evaluates to true (e.g., `while (c) s`)
+A while loop executes the body repeatedly as long as the test condition expression evaluates to `true` (e.g., `while (c) s`). While is used to perform the looping operation.
+
+```
+var i:Int = 0;
+while (i < 10){ // test condition
+    print("Hello!"); // while body, this block is executed 10 times
+    i = i + 1;
+}
+```
 
 ## Variables
 
-Variables are declared using the "var" keyword. Variables must specify their type and must be initialized with an expression (e.g., `var x: Int = 5;`)
+Variables are declared using the "var" keyword. Variables must specify their type and must be initialized with an expression. Variable declaration binds an identifier to a variable type.
+
+```
+var x: Int = 5; // variable x is of type Int
+var str_array:[String] = ["Hello", "World"]; // str_array is a String array
+var P1:Point = Point(1, 2); // P1 is a struct of type Point
+```
 
 ## Functions
 
-Functions calls look like C: `callee(argument1, argument2, ...)`
+Function call looks like C: `callee(argument1, argument2, ...)`
 
 Functions are declared using the "fun" keyword. Functions must have a name, and declared their parameter types and return type. See below for examples.
+
+```
+fun test1(i: Int) -> Int { // function name is test1, accepts an integer as parameter and returns an integer
+return i*100;
+}
+
+print(test1(3)); // invoking the function
+
+// composite function
+fun test2(i: Int) -> Int {
+return test1(i);
+}
+
+print(test2(3));
+
+// recursion: function that has calls itself
+fun fib(i: Int) -> Int {
+ if (i <= 1)
+    return 1;
+ else
+    return i * fib(i-1);
+ }
+ 
+print(fib(5));
+
+
+//no return type
+fun length_of_arr(x: [Int]) -> Unit {
+    print(len(x));
+}
+
+length_of_arr([1,2,3]);
+
+// Any type as parameter
+fun test(x:Any)->Unit{
+    print(x);
+}
+
+test(1);
+test("Hello");
+```
 
 Values can be returned using the "return" statement. Functions whose return type is Unit do not need to contain a return statement. All other functions must return a value of the appropriate type.
 
 ### Builtin functions:
 
 * `fun print(s: String) -> Unit { ... }`
+  * `print` function accepts a string as parameter and has no return value. It displays the string in the standard output device.
 * `fun concat(s1: String, s2: String) -> String { ... }`
-* `fun str(a: Any) -> String { ... }`
+  * `concat` function accepts two strings as parameters and the return type is a string value. The function concatenates the strings and returns the concatenated string value.
+    ```agsl
+    var str1:String = "Hello ";
+    var str2:String = "World!";
+    print(concat(str1, str2)); // "Hello World!"
+    ```
+  * `fun str(a: Any) -> String { ... }`
+    * `str` function is used to cast values of types: `Int`, `Any`, `boolean`, `Struct` to `String` type.
+    ```
+    var str_var:String = "Hello ";
+    print(str(str_var)); // casting string to string
+  
+    var int_var:Int = 1;
+    print(str(int_var)); // casting int to string
+  
+  
+    struct Point{x:Int, y:Int}
+  
+    var struct_var:Point = Point(10, 100);
+    print(str(struct_var)); // casting struct to string
+  
+    var any_var:Any = 1;
+    print(str(any_var)); // casting Any to string
+    var any_var:Any = "World!";
+    print(str(any_var)); // casting Any to string
+    var any_var:Any = Point(100, 200);
+    print(str(any_var)); // casting Any to string
+    ```
 
