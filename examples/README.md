@@ -19,10 +19,10 @@ Email : dpranjal@udel.edu
 
 # Discussion
 
-For this assignment, we only discuss between ourselves. We've both equally wrote
+For this assignment, Pranjal and Wahid were the only collaborators. Pranjal and Wahid both equally wrote
 the test cases.
 
-Wahid more focused on expression, precedence, grouping testing. Pranjal focused on the function, variable, assignment testing.
+Wahid wrote the test cases for expression, precedence, and grouping testing. Pranjal focused on the function, variable, assignment testing.
 
-Moreover, report was written by both us. Wahid wrote the report "Design.pdf" and Pranjal wrote the report 
-"Specification.pdf".
+Moreover, report was written by both of us. Wahid wrote the report "Design.pdf" and Pranjal wrote the report 
+"Specification.md".
