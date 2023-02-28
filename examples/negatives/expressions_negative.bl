@@ -1,0 +1,20 @@
+//casting error should happen
+fun type_error_arithmetic_expression(x: Int, y: String) -> Int {
+    return x - y;
+}
+
+print(type_error(3, "3"));
+
+
+fun type_error_comparison_expression(x: Int, y: String) -> Boolean {
+    return x > y;
+}
+
+print(type_error(3, "3"));
+
+
+fun type_error_logical_expression(x: Int, y: String) -> Boolean {
+    return x && y;
+}
+
+print(type_error(3, "true"));

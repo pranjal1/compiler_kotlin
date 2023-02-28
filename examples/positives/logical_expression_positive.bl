@@ -1,0 +1,28 @@
+fun not_expression(x: Boolean) -> Boolean {
+    return !x;
+}
+
+fun and_expression(x: Boolean, y: Boolean) -> Boolean {
+    return (x && y);
+}
+
+fun or_expression(x: Boolean, y: Boolean) -> Boolean {
+    return (x || y);
+}
+
+// logical operations
+print("NOT Expression Checking_ Expected: false, true");
+print(not_expression(true));
+print(not_expression(false));
+
+print("AND Expression Checking_ Expected: true, false, false, false");
+print(and_expression(true, true));
+print(and_expression(true, false));
+print(and_expression(false, true));
+print(and_expression(false, false));
+
+print("OR Expression Checking_ Expected: true, true, true, false");
+print(or_expression(true, true));
+print(or_expression(true, false));
+print(or_expression(false, true));
+print(or_expression(false, false));

@@ -1,0 +1,36 @@
+fun compare_greater_than(x: Int, y: Int) -> Boolean {
+    return x > y;
+}
+
+fun compare_greater_than_equal(x: Int, y: Int) -> Boolean {
+    return x >= y;
+}
+
+fun compare_less_than(x: Int, y: Int) -> Boolean {
+    return x < y;
+}
+
+fun compare_less_than_equal(x: Int, y: Int) -> Boolean {
+    return x <= y;
+}
+
+// Comparison operations
+print("Greater than Expression Checking_ Expected: true, false, false");
+print(compare_greater_than(5,3));
+print(compare_greater_than(3,5));
+print(compare_greater_than(5,5));
+
+print("Greater than equal Expression Checking_ Expected: true, false, true");
+print(compare_greater_than_equal(5,3));
+print(compare_greater_than_equal(3,5));
+print(compare_greater_than_equal(5,5));
+
+print("Less than Expression Checking_ Expected: false, true, false");
+print(compare_less_than(5,3));
+print(compare_less_than(3,5));
+print(compare_less_than(5,5));
+
+print("Less than equal Expression Checking_ Expected: false, true, true");
+print(compare_less_than_equal(5,3));
+print(compare_less_than_equal(3,5));
+print(compare_less_than_equal(5,5));

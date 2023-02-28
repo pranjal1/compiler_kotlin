@@ -1,0 +1,3 @@
+// string addition not supported
+var str_added: String = "Pranjal" + "Dhakal";
+print(str_added);

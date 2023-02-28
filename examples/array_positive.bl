@@ -1,4 +1,0 @@
-var char_arr:[String] = ["U", "n", "i", "v", "e", "s", "i", "t", "y"];
-var int_arr: [Int] = [1,2];
-print(char_arr);
-print(int_arr);

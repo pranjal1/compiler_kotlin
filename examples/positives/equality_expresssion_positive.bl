@@ -1,0 +1,17 @@
+fun compare_equal(x: Int, y: Int) -> Boolean {
+    return x == y;
+}
+
+fun compare_not_equal(x: Int, y: Int) -> Boolean {
+    return x != y;
+}
+
+// Comparison operations
+print("Equal Expression Checking_ Expected: false, true");
+print(compare_equal(5,3));
+print(compare_equal(5,5));
+
+// Comparison operations
+print("Equal Expression Checking_ Expected: true, fals");
+print(compare_not_equal(5,3));
+print(compare_not_equal(5,5));
