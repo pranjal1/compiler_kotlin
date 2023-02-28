@@ -1,3 +1,4 @@
 //array index assignment is not supported
+var char_arr:[String] = ["U", "n", "i", "v", "e", "s", "i", "t", "y"];
 char_arr[0] = "A";
 print(char_arr);
